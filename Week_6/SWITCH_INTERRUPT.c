@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
-#define SWITCH 18
+#define SWITCH 17
 
 int switchPressed = 0;      // Counter for switch
-int switchStatus;       // Status of switch input
+int switchStatus;           // Status of switch input
 
 void switch_pressed_callback()
 {
