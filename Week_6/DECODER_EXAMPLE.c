@@ -4,25 +4,25 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 
-#define ENCODERA 17	// Hall Sensor A
-#define ENCODERB 27	// Hall Sensor B
-#define ENC2REDGEAR 216
+#define ENCODERA 17	        // Hall Sensor A
+#define ENCODERB 27	        // Hall Sensor B
+#define ENC2REDGEAR 216     // 12 Edge x 18:1 Gear ratio
 
-int encA;
-int encB;
-int encoderPosition = 0;
-float redGearPosition = 0;
+int encA; 
+int encB;   
+int encoderPosition = 0;    // Position of Encoder
+float redGearPosition = 0;  // Position of Motor
 
 void funcEncoderA()
 {
     encA = digitalRead(ENCODERA);
     encB = digitalRead(ENCODERB);
-    if (encA == HIGH)
+    if (encA == HIGH)   // Rising at A
     {
         if (encB == LOW) encoderPosition++;
         else encoderPosition--;
     }
-    else
+    else                // Falling at A
     {
         if (encB == LOW) encoderPosition--;
         else encoderPosition++;
@@ -36,12 +36,12 @@ void funcEncoderB()
 {
     encA = digitalRead(ENCODERA);
     encB = digitalRead(ENCODERB);
-    if (encB == HIGH)
+    if (encB == HIGH)   // Rising at B
     {
         if (encA == LOW) encoderPosition--;
         else encoderPosition++;
     }
-    else
+    else                // Falling at B
     {
         if (encA == LOW) encoderPosition++;
         else encoderPosition--;
