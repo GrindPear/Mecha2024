@@ -113,6 +113,7 @@ int main(void)
 
     errorPosition = referencePosition - redGearPosition;
     checkTimeBefore = millis();
+    startTime = millis();
     while(1)
     {
         checkTime = millis();
