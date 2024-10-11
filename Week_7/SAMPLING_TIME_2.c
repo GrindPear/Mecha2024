@@ -1,7 +1,6 @@
 /* SAMPLING_TIME_2 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <wiringPi.h>
 
 int main()

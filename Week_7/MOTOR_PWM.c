@@ -6,7 +6,6 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 
-
 #define MOTOR1 19   // Motor DI 1
 #define MOTOR2 26   // Motor DI 2
 

@@ -1,4 +1,4 @@
-/* PLOT_GRAPH */
+/* SAVE_GRAPH */
 
 #include <stdio.h>
 #include <stdlib.h>
