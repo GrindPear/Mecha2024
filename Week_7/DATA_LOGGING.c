@@ -7,7 +7,6 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 
-
 #define LOOPTIME 5  // Sampling Time
 #define ENCODERA 17 // Hall Sensor A
 #define ENCODERB 27 // Hall Sensor B
