@@ -115,7 +115,8 @@ int main(void)
 {   
     printf("Enter the CSV file name: ");
     scanf("%s", filename);
-    snprintf(filename_csv, sizeof(filename_csv), "%s.csv", filename);
+    filename_csv = filename;
+    strcat(filename_csv, ".csv"); 
     file = fopen(filename_csv, "w+");
 
     signal(SIGINT, handle_sigint);
